@@ -1,11 +1,18 @@
-import React from "react";
+import { add } from "date-fns";
+import React, { useState } from "react";
 
 function Item({ name, category }) {
+  
+  const [addToCart, setAddToCart] = useState(false)
+  function handleClick(e){
+    setAddToCart(!addToCart)
+  }
+ // console.log(addToCart)
   return (
-    <li className="">
+    <li className={addToCart ? "in-cart" : ""}>
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add">Add to Cart</button>
+      <button className="add" onClick={handleClick}>{addToCart ? "Remove from Cart" : "Add To Cart"}</button>
     </li>
   );
 }
