@@ -7,7 +7,7 @@ function Item({ name, category }) {
   function handleClick(e){
     setAddToCart(!addToCart)
   }
- // console.log(addToCart)
+ 
   return (
     <li className={addToCart ? "in-cart" : ""}>
       <span>{name}</span>
