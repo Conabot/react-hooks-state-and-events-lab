@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Item from "./Item";
-//import items from "./data/items";
 
 function ShoppingList({items}) {
 const[selectedCategory, setselected]= useState(items);
 
-//console.log(selectedCategory)
+
  function handleChange(e) {
   setselected(e.target.value);
 
