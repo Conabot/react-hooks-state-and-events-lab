@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
-/* import { set } from "date-fns";
-import is from "date-fns/esm/locale/is/index.js"; */
+
 
 function App() {
 
