@@ -1,25 +1,27 @@
 import React, { useState } from "react";
 import Item from "./Item";
-import { add } from "date-fns";
+//import { add } from "date-fns";
 
 function ShoppingList({items}) {
-const[selectedCategory, setselected]= useState(items);
+const[selectedCategory, setSelectedCategory]= useState("All");
 
 
  function handleChange(e) {
-  setselected(e.target.value);
+  setSelectedCategory(e.target.value);
 
  }
 
-const filteredItems = selectedCategory !== items
-    ? items.filter(item => item.category === selectedCategory)
-    : items;
+const filteredItems = items.filter(item => {
+  if (selectedCategory === "All"){
+    return item
+  } else{
+    return  item.category === selectedCategory}});
 
 console.log(filteredItems)
   return (
     <div className="ShoppingList">
       <div className="Filter">
-        <select name="filter" onChange={handleChange}>
+        <select name="filter"  onChange={handleChange}>
           <option value="All">Filter by category</option>
           <option value="Produce">Produce</option>
           <option value="Dairy">Dairy</option>

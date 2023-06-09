@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
-import { add } from "date-fns";
+
 
 function App() {
 
@@ -10,6 +10,7 @@ function App() {
   //const appClass = false ? "App dark" : "App light"
   const [isDarkMode, setDarkMode] = useState(false)
   //console.log(isDarkMode);
+  //const [items, setItems] = useState(itemData)
   function handleClick(e){
     setDarkMode(!isDarkMode)
     
